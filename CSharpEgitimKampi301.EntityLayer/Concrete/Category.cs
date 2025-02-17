@@ -24,9 +24,8 @@ namespace CSharpEgitimKampi301.EntityLayer.Concrete
 
         public bool CategoryStatus { get; set; }
 
+        //Bire-çok ilişki
+        public List<Product> Products { get; set; }
+
     }
 }
-
-/* Field-Variable-Property
-   
-  */

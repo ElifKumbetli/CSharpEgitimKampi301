@@ -10,5 +10,19 @@ namespace CSharpEgitimKampi301.EntityLayer.Concrete
     {
         public int OrderId { get; set; }
 
+        public int ProductId { get; set; }
+
+        public virtual Product Product { get; set; }//Navigation Property
+
+        //Quantity: Miktar , adet
+        public int Quantity { get; set; } //Adet
+
+        public decimal UnitPrice { get; set; }
+
+        public decimal TotalPrice { get; set; }
+
+        public int CustomerId { get; set; }
+
+        public virtual Customer Customer { get; set; }
     }
 }
