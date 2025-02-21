@@ -9,4 +9,4 @@ Bu repo, **C# Eğitim Kampı** çerçevesinde gerçekleştirilen projeyi içerme
 
 Aşağıda, proje kapsamında geliştirilen **FrmStatistics** arayüzüne ait bir ekran görüntüsü bulunmaktadır:
 
-![📊 FrmStatistics](frmstatistics.png)
+![FrmStatistics Ekran Görüntüsü](CSharpEgitimKampi301.EFProject/images/frmstatistics.png)
