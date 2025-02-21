@@ -15,6 +15,8 @@ namespace CSharpEgitimKampi301.EFProject
         public FrmLocation()
         {
             InitializeComponent();
+            db.Configuration.ProxyCreationEnabled = false;
+
         }
 
         EgitimKampiEfTravelDbEntities db = new EgitimKampiEfTravelDbEntities();
