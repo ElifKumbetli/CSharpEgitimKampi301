@@ -1,4 +1,5 @@
-﻿using CSharpEgitimKampi301.BusinessLayer.Concrete;
+﻿using CSharpEgitimKampi301.BusinessLayer.Abstract;
+using CSharpEgitimKampi301.BusinessLayer.Concrete;
 using CSharpEgitimKampi301.DataAccessLayer.EntityFramework;
 using System;
 using System.Collections.Generic;
@@ -14,9 +15,11 @@ namespace CSharpEgitimKampi301.PresentationLayer
 {
     public partial class FrmProduct : Form
     {
+        private readonly IProductService _productService;
         public FrmProduct()
         {
             InitializeComponent();
+            _productService = new ProductManager(new EfProductDal());
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -24,17 +27,21 @@ namespace CSharpEgitimKampi301.PresentationLayer
 
         }
 
-        ProductManager productManager = new ProductManager(new EfProductDal());
         private void btnList_Click(object sender, EventArgs e)
         {
-            var values = productManager.TGetAll();
+            var values = _productService.TGetAll();
             dataGridView1.DataSource = values;
         }
 
         private void btnList2_Click(object sender, EventArgs e)
         {
-            var values = productManager.TGetProductsWithCategory();
+            var values = _productService.TGetProductsWithCategory();
             dataGridView1.DataSource = values;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
