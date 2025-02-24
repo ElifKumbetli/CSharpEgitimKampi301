@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace CSharpEgitimKampi301.BusinessLayer.Abstract
 {
-    internal interface IProductService:IGenericService<Product>
+    public interface IProductService : IGenericService<Product>
     {
+        List<object> TGetProductsWithCategory();
+
     }
 }
