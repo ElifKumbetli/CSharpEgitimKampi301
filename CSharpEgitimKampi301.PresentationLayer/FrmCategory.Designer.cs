@@ -32,7 +32,7 @@
             this.txtCategoryId = new System.Windows.Forms.TextBox();
             this.btnList = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCategoryName = new System.Windows.Forms.TextBox();
             this.lblCategoryName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.rdbActive = new System.Windows.Forms.RadioButton();
@@ -68,6 +68,7 @@
             this.btnList.TabIndex = 2;
             this.btnList.Text = "Listele";
             this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // dataGridView1
             // 
@@ -79,12 +80,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(466, 318);
             this.dataGridView1.TabIndex = 3;
             // 
-            // textBox2
+            // txtCategoryName
             // 
-            this.textBox2.Location = new System.Drawing.Point(153, 43);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(189, 22);
-            this.textBox2.TabIndex = 5;
+            this.txtCategoryName.Location = new System.Drawing.Point(153, 43);
+            this.txtCategoryName.Name = "txtCategoryName";
+            this.txtCategoryName.Size = new System.Drawing.Size(189, 22);
+            this.txtCategoryName.TabIndex = 5;
             // 
             // lblCategoryName
             // 
@@ -134,6 +135,7 @@
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Ekle";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
@@ -143,6 +145,7 @@
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Sil";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnGetById
             // 
@@ -152,6 +155,7 @@
             this.btnGetById.TabIndex = 12;
             this.btnGetById.Text = "ID\' ye Göre Getir";
             this.btnGetById.UseVisualStyleBackColor = true;
+            this.btnGetById.Click += new System.EventHandler(this.btnGetById_Click);
             // 
             // btnUpdate
             // 
@@ -161,6 +165,7 @@
             this.btnUpdate.TabIndex = 11;
             this.btnUpdate.Text = "Güncelle";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // FrmCategory
             // 
@@ -174,7 +179,7 @@
             this.Controls.Add(this.rdbPassive);
             this.Controls.Add(this.rdbActive);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtCategoryName);
             this.Controls.Add(this.lblCategoryName);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnList);
@@ -194,7 +199,7 @@
         private System.Windows.Forms.TextBox txtCategoryId;
         private System.Windows.Forms.Button btnList;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCategoryName;
         private System.Windows.Forms.Label lblCategoryName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton rdbActive;

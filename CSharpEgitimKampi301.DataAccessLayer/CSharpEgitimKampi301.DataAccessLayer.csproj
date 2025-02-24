@@ -67,6 +67,14 @@
     <Compile Include="Migrations\202502171921086_mig1.Designer.cs">
       <DependentUpon>202502171921086_mig1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202502241616513_UpdateDatabase.cs" />
+    <Compile Include="Migrations\202502241616513_UpdateDatabase.Designer.cs">
+      <DependentUpon>202502241616513_UpdateDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202502241618267_NewMigrationName.cs" />
+    <Compile Include="Migrations\202502241618267_NewMigrationName.Designer.cs">
+      <DependentUpon>202502241618267_NewMigrationName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\GenericRepository.cs" />
@@ -85,6 +93,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202502171921086_mig1.resx">
       <DependentUpon>202502171921086_mig1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202502241616513_UpdateDatabase.resx">
+      <DependentUpon>202502241616513_UpdateDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202502241618267_NewMigrationName.resx">
+      <DependentUpon>202502241618267_NewMigrationName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
