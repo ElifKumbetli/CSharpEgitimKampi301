@@ -32,8 +32,7 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.txtCategoryName = new System.Windows.Forms.TextBox();
-            this.txtProductName = new System.Windows.Forms.Label();
+            this.lblproductname = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnList = new System.Windows.Forms.Button();
             this.txtProductId = new System.Windows.Forms.TextBox();
@@ -47,6 +46,7 @@
             this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnList2 = new System.Windows.Forms.Button();
+            this.txtProductName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +58,7 @@
             this.btnGetById.TabIndex = 25;
             this.btnGetById.Text = "ID\' ye Göre Getir";
             this.btnGetById.UseVisualStyleBackColor = true;
+            this.btnGetById.Click += new System.EventHandler(this.btnGetById_Click);
             // 
             // btnUpdate
             // 
@@ -67,6 +68,7 @@
             this.btnUpdate.TabIndex = 24;
             this.btnUpdate.Text = "Güncelle";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -86,22 +88,16 @@
             this.btnAdd.TabIndex = 22;
             this.btnAdd.Text = "Ekle";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // txtCategoryName
+            // lblproductname
             // 
-            this.txtCategoryName.Location = new System.Drawing.Point(146, 79);
-            this.txtCategoryName.Name = "txtCategoryName";
-            this.txtCategoryName.Size = new System.Drawing.Size(189, 22);
-            this.txtCategoryName.TabIndex = 18;
-            // 
-            // txtProductName
-            // 
-            this.txtProductName.AutoSize = true;
-            this.txtProductName.Location = new System.Drawing.Point(37, 79);
-            this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(61, 16);
-            this.txtProductName.TabIndex = 17;
-            this.txtProductName.Text = "Ürün Adı:";
+            this.lblproductname.AutoSize = true;
+            this.lblproductname.Location = new System.Drawing.Point(37, 79);
+            this.lblproductname.Name = "lblproductname";
+            this.lblproductname.Size = new System.Drawing.Size(61, 16);
+            this.lblproductname.TabIndex = 17;
+            this.lblproductname.Text = "Ürün Adı:";
             // 
             // dataGridView1
             // 
@@ -155,7 +151,6 @@
             this.label2.Size = new System.Drawing.Size(68, 16);
             this.label2.TabIndex = 26;
             this.label2.Text = "Ürün Stok:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtProductPrice
             // 
@@ -217,12 +212,21 @@
             this.btnList2.UseVisualStyleBackColor = true;
             this.btnList2.Click += new System.EventHandler(this.btnList2_Click);
             // 
+            // txtProductName
+            // 
+            this.txtProductName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtProductName.Location = new System.Drawing.Point(147, 79);
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.Size = new System.Drawing.Size(189, 22);
+            this.txtProductName.TabIndex = 35;
+            // 
             // FrmProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1081, 599);
+            this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.btnList2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cmbCategory);
@@ -236,14 +240,14 @@
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.txtCategoryName);
-            this.Controls.Add(this.txtProductName);
+            this.Controls.Add(this.lblproductname);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnList);
             this.Controls.Add(this.txtProductId);
             this.Controls.Add(this.label1);
             this.Name = "FrmProduct";
             this.Text = " ";
+            this.Load += new System.EventHandler(this.FrmProduct_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -256,8 +260,7 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox txtCategoryName;
-        private System.Windows.Forms.Label txtProductName;
+        private System.Windows.Forms.Label lblproductname;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnList;
         private System.Windows.Forms.TextBox txtProductId;
@@ -271,5 +274,6 @@
         private System.Windows.Forms.ComboBox cmbCategory;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnList2;
+        private System.Windows.Forms.TextBox txtProductName;
     }
 }
